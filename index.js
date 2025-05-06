@@ -11,7 +11,7 @@ app.use(express.json());
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'grandauto1763@gmail.com',       // ⚠️ Твоя почта
+    user: 'giorgi.baxdasaryan@mail.ru',       // ⚠️ Твоя почта
     pass: 'junh mknq akzr bafp',    // ⚠️ Пароль приложения (НЕ обычный пароль!)
   },
 });
@@ -23,7 +23,7 @@ app.post('/api/send-email', async (req, res) => {
   try {
     await transporter.sendMail({
       from: email,
-      to: 'giorgi.baxdasaryan@mail.ru', // куда отправлять
+      to: 'grandauto1763@gmail.com', // куда отправлять
       subject: 'New Contact Form Message',
       text: `
         Name: ${firstName} ${lastName}
